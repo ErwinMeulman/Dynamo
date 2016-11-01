@@ -1,0 +1,41 @@
+<Workspace Version="1.2.0.2564" X="342.043297289174" Y="-435.24879370604" zoom="1.09218965916194" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+  <NamespaceResolutionMap />
+  <Elements>
+    <CoreNodeModels.Input.StringInput guid="a95849a3-d4aa-4ad3-8f8e-e98b6a825910" type="CoreNodeModels.Input.StringInput" nickname="String" x="370.236574407378" y="345.918259623406" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>The Dynamo Player application executes Dynamo scripts in the Revit environment. Dynamo scripts can be written to perform many complex functions in Revit, some of which can be very useful to minimize repetitve and time consuming tasks, to run model checks, or to extract and utilize information from the Revit model. Learn more at http://dynamobim.org.</System.String>
+      <System.String value="The Dynamo Player application executes Dynamo scripts in the Revit environment. Dynamo scripts can be written to perform many complex functions in Revit, some of which can be very useful to minimize repetitve and time consuming tasks, to run model checks, or to extract and utilize information from the Revit model. Learn more at http://dynamobim.org." />
+    </CoreNodeModels.Input.StringInput>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="8a9f0d4f-ca22-4288-9c39-f729d35ee5cc" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-188.112709519375" y="636.175643215793" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="true" CodeText="&quot;You just ran a Dynamo script in Dynamo Player!&quot; + &quot;\n\n&quot; +  &quot;Dynamo Player executes Dynamo scripts for Revit. Scripts can perform many complex functions in Revit. They can minimize repetitive tasks, run Revit model checks, or extract and utilize information from the model.&quot;;" ShouldFocus="false" />
+    <PythonNodeModels.PythonNode guid="2f5e2b09-e28c-45de-98e4-2fcf3da8879c" type="PythonNodeModels.PythonNode" nickname="Python Script" x="644.658130538842" y="691.168182784266" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" inputcount="2">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <Script>#This script pops up a dialog box with a message from the previous node.
+import clr
+clr.AddReference('RevitAPIUI')
+
+from Autodesk.Revit.UI import TaskDialog
+
+mainText = IN[0]
+footerText = IN[1]
+
+messagePop = TaskDialog("Dynamo Player")
+messagePop.MainContent = mainText + "\n\n" + "&lt;a href=\"http://dynamobim.org/ \"&gt;" + footerText + "&lt;/a&gt;";
+
+OUT = "Success!"
+
+messagePop.Show()</Script>
+    </PythonNodeModels.PythonNode>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="d7262eb3-c009-4277-9970-7f64a27582bb" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-180.161791647053" y="951.786619324748" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="78d6cef0-c45b-4730-a80f-6f4534ab64c9" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="56.1113544867144" y="750.213380675252" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="true" CodeText="&quot;Learn more about Dynamo scripts at dynamobim.org&quot;;" ShouldFocus="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="8a9f0d4f-ca22-4288-9c39-f729d35ee5cc" start_index="0" end="2f5e2b09-e28c-45de-98e4-2fcf3da8879c" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="78d6cef0-c45b-4730-a80f-6f4534ab64c9" start_index="0" end="2f5e2b09-e28c-45de-98e4-2fcf3da8879c" end_index="1" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>
