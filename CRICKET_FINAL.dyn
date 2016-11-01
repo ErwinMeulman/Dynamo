@@ -1,0 +1,32 @@
+<Workspace Version="0.7.5.3272" X="132.583365608466" Y="-312.869681110807" zoom="1.02988563947099" Description="" Category="" Name="Home">
+  <Elements>
+    <Dynamo.Nodes.DSFunction type="Dynamo.Nodes.DSFunction" guid="750c02b6-f298-4141-8da2-406acf30ccb8" nickname="Excel.WriteToFile" x="849.961631531619" y="489.044823687017" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSOffice.dll" function="DSOffice.Excel.WriteToFile@string,string,int,int,var[][]" />
+    <DSCore.File.Filename type="DSCore.File.Filename" guid="289f35ee-90d1-4ec0-a90f-efb723f9f46a" nickname="File Path" x="-18" y="305.5" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+      <System.String>E:\BACKUP\Personal\Presentation\Presentation_14_12_03_AUTODESK_UNIVERSITY_2014\01_DYNAMO LECTURE\EXERSIZES\EX_04_EXTRACT_AC_COMPONENTS_CRICKETS\CRICKET_START.xlsx</System.String>
+    </DSCore.File.Filename>
+    <Dynamo.Nodes.StringInput type="Dynamo.Nodes.StringInput" guid="479e29cf-c4b3-4875-a2cf-81e851fc1e97" nickname="String" x="513.273262045391" y="440.594157019797" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+      <System.String value="Sheet1" />
+    </Dynamo.Nodes.StringInput>
+    <Dynamo.Nodes.DoubleInput type="Dynamo.Nodes.DoubleInput" guid="ed8d3be7-2304-4a69-bb2b-44a5ea629538" nickname="Number" x="511.030605939786" y="511.64814191408" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+      <System.Double value="0" />
+    </Dynamo.Nodes.DoubleInput>
+    <Dynamo.Nodes.DoubleInput type="Dynamo.Nodes.DoubleInput" guid="21678519-da6b-4a1f-b9a0-39d7afeb495e" nickname="Number" x="514.343133256248" y="592.070528024262" isVisible="true" isUpstreamVisible="true" lacing="Disabled">
+      <System.Double value="0" />
+    </Dynamo.Nodes.DoubleInput>
+    <DSRevitNodesUI.FamilyTypes type="DSRevitNodesUI.FamilyTypes" guid="fd448161-ea11-4651-ac4b-47b07de97481" nickname="Family Types" x="-154.485024596203" y="603.75163052694" isVisible="true" isUpstreamVisible="true" lacing="Disabled" index="17:ROOF_CRICKET:ROOF_CRICKET" />
+    <DSRevitNodesUI.ElementsOfFamilyType type="DSRevitNodesUI.ElementsOfFamilyType" guid="4f6697d7-aa25-421b-8623-3a2564d87f18" nickname="All Elements of Family Type" x="153.830740397364" y="773.271406690145" isVisible="true" isUpstreamVisible="true" lacing="Disabled" />
+    <Dynamo.Nodes.Watch type="Dynamo.Nodes.Watch" guid="1574610c-e2fd-496d-a2f3-546f6bc957bf" nickname="Watch" x="115.962458225732" y="859.688768568999" isVisible="true" isUpstreamVisible="true" lacing="Disabled" />
+    <Dynamo.Nodes.DSFunction type="Dynamo.Nodes.DSFunction" guid="42b8e106-9a49-41ff-abb1-eb9a6c9c6f1f" nickname="AdaptiveComponent.PlacementPointLocations" x="413.082826033929" y="708.215639882467" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="RevitNodes.dll" function="Revit.Elements.AdaptiveComponent.Locations" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Models.ConnectorModel start="289f35ee-90d1-4ec0-a90f-efb723f9f46a" start_index="0" end="750c02b6-f298-4141-8da2-406acf30ccb8" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="479e29cf-c4b3-4875-a2cf-81e851fc1e97" start_index="0" end="750c02b6-f298-4141-8da2-406acf30ccb8" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="ed8d3be7-2304-4a69-bb2b-44a5ea629538" start_index="0" end="750c02b6-f298-4141-8da2-406acf30ccb8" end_index="2" portType="0" />
+    <Dynamo.Models.ConnectorModel start="21678519-da6b-4a1f-b9a0-39d7afeb495e" start_index="0" end="750c02b6-f298-4141-8da2-406acf30ccb8" end_index="3" portType="0" />
+    <Dynamo.Models.ConnectorModel start="fd448161-ea11-4651-ac4b-47b07de97481" start_index="0" end="4f6697d7-aa25-421b-8623-3a2564d87f18" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="4f6697d7-aa25-421b-8623-3a2564d87f18" start_index="0" end="1574610c-e2fd-496d-a2f3-546f6bc957bf" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="4f6697d7-aa25-421b-8623-3a2564d87f18" start_index="0" end="42b8e106-9a49-41ff-abb1-eb9a6c9c6f1f" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="42b8e106-9a49-41ff-abb1-eb9a6c9c6f1f" start_index="0" end="750c02b6-f298-4141-8da2-406acf30ccb8" end_index="4" portType="0" />
+  </Connectors>
+  <Notes />
+</Workspace>

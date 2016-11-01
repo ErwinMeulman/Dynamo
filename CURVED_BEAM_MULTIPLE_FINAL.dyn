@@ -1,0 +1,37 @@
+<Workspace Version="0.7.5.3272" X="142.017750336188" Y="175.618501998626" zoom="0.597487094815786" Description="" Category="" Name="Home">
+  <Elements>
+    <Dynamo.Nodes.DSFunction type="Dynamo.Nodes.DSFunction" guid="e19caef3-aa74-4b77-944b-5e91ae0cb9ee" nickname="StructuralFraming.BeamByCurve" x="1277" y="511.5" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="RevitNodes.dll" function="Revit.Elements.StructuralFraming.BeamByCurve@Autodesk.DesignScript.Geometry.Curve,Revit.Elements.Level,Revit.Elements.FamilySymbol" />
+    <Dynamo.Nodes.DSFunction type="Dynamo.Nodes.DSFunction" guid="84335cc1-1cf1-43d8-b4d3-e449f6dad32b" nickname="Grid.Curve" x="680.176063609167" y="171.028190827502" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="RevitNodes.dll" function="Revit.Elements.Grid.Curve" />
+    <DSRevitNodesUI.ElementTypes type="DSRevitNodesUI.ElementTypes" guid="02d9c80e-4502-498a-8c22-fc66af4c4591" nickname="Element Types" x="120" y="180.5" isVisible="true" isUpstreamVisible="true" lacing="Disabled" index="61:CurveElement" />
+    <DSRevitNodesUI.ElementsOfType type="DSRevitNodesUI.ElementsOfType" guid="b16d6eb4-e695-4770-9d51-71a41bc867a1" nickname="All Elements of Type" x="358.024685890503" y="294.899162374675" isVisible="false" isUpstreamVisible="true" lacing="Disabled" />
+    <Dynamo.Nodes.DSFaceSelection type="Dynamo.Nodes.DSFaceSelection" guid="d4fb441b-57e7-4c90-b377-5c41feb22ea3" nickname="Select Face" x="286" y="49.5" isVisible="false" isUpstreamVisible="true" lacing="Disabled">
+      <instance id="96ae7a7a-ec31-484c-a41e-756f17d93c8c-00049533:0:SURFACE" />
+    </Dynamo.Nodes.DSFaceSelection>
+    <Dynamo.Nodes.DSFunction type="Dynamo.Nodes.DSFunction" guid="89d00137-8d48-437a-a12c-5d653b1e8242" nickname="Curve.Extrude" x="813.568482038902" y="247.203966260397" isVisible="false" isUpstreamVisible="true" lacing="Shortest" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Curve.Extrude@Autodesk.DesignScript.Geometry.Vector,double">
+      <PortInfo index="2" default="True" />
+    </Dynamo.Nodes.DSFunction>
+    <Dynamo.Nodes.DSFunction type="Dynamo.Nodes.DSFunction" guid="f62d166c-65df-43d5-bf57-f021302b2a0b" nickname="Vector.ZAxis" x="628.576151734822" y="308.063808789571" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Vector.ZAxis" />
+    <Dynamo.Nodes.CodeBlockNodeModel type="Dynamo.Nodes.CodeBlockNodeModel" guid="c8151da1-fe87-4c57-8b31-8879d1cca913" nickname="Code Block" x="659.876570547485" y="508.074057671509" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="8;" ShouldFocus="false" />
+    <Dynamo.Nodes.DSFunction type="Dynamo.Nodes.DSFunction" guid="bb59668d-4b14-4f46-9bad-4b81c1972b47" nickname="Geometry.IntersectAll" x="1060" y="105.5" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Geometry.IntersectAll@Autodesk.DesignScript.Geometry.Geometry[]" />
+    <DSRevitNodesUI.Levels type="DSRevitNodesUI.Levels" guid="e1a49e6d-f876-4556-abf1-f2de181d3890" nickname="Levels" x="1043" y="558.5" isVisible="true" isUpstreamVisible="true" lacing="Disabled" index="4:Level 5" />
+    <DSRevitNodesUI.StructuralFramingTypes type="DSRevitNodesUI.StructuralFramingTypes" guid="11280c2b-cb2b-4ab7-a3a0-fdfcefaccced" nickname="Structural Framing Types" x="802" y="718.5" isVisible="true" isUpstreamVisible="true" lacing="Disabled" index="3:W30X90" />
+    <Dynamo.Nodes.DSFunction type="Dynamo.Nodes.DSFunction" guid="6cee43b8-089a-4601-b881-153487f6e20f" nickname="Element.Geometry" x="493.726701240792" y="433.726451709544" isVisible="false" isUpstreamVisible="true" lacing="Shortest" assembly="RevitNodes.dll" function="Revit.Elements.Element.Geometry" />
+    <Dynamo.Nodes.DSFunction type="Dynamo.Nodes.DSFunction" guid="08363dab-501b-4c31-8f3e-ee665721df8f" nickname="List.Flatten" x="1361.73022506353" y="146.175207299852" isVisible="true" isUpstreamVisible="true" lacing="Shortest" assembly="DSCoreNodes.dll" function="DSCore.List.Flatten@var[]..[],int" />
+    <Dynamo.Nodes.CodeBlockNodeModel type="Dynamo.Nodes.CodeBlockNodeModel" guid="fc0c4d7a-4445-4640-a72f-6322d13a27e9" nickname="Code Block" x="1116" y="263" isVisible="true" isUpstreamVisible="true" lacing="Disabled" CodeText="2;" ShouldFocus="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Models.ConnectorModel start="02d9c80e-4502-498a-8c22-fc66af4c4591" start_index="0" end="b16d6eb4-e695-4770-9d51-71a41bc867a1" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="b16d6eb4-e695-4770-9d51-71a41bc867a1" start_index="0" end="6cee43b8-089a-4601-b881-153487f6e20f" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="d4fb441b-57e7-4c90-b377-5c41feb22ea3" start_index="0" end="bb59668d-4b14-4f46-9bad-4b81c1972b47" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="89d00137-8d48-437a-a12c-5d653b1e8242" start_index="0" end="bb59668d-4b14-4f46-9bad-4b81c1972b47" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="f62d166c-65df-43d5-bf57-f021302b2a0b" start_index="0" end="89d00137-8d48-437a-a12c-5d653b1e8242" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="c8151da1-fe87-4c57-8b31-8879d1cca913" start_index="0" end="89d00137-8d48-437a-a12c-5d653b1e8242" end_index="2" portType="0" />
+    <Dynamo.Models.ConnectorModel start="bb59668d-4b14-4f46-9bad-4b81c1972b47" start_index="0" end="08363dab-501b-4c31-8f3e-ee665721df8f" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="e1a49e6d-f876-4556-abf1-f2de181d3890" start_index="0" end="e19caef3-aa74-4b77-944b-5e91ae0cb9ee" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="11280c2b-cb2b-4ab7-a3a0-fdfcefaccced" start_index="0" end="e19caef3-aa74-4b77-944b-5e91ae0cb9ee" end_index="2" portType="0" />
+    <Dynamo.Models.ConnectorModel start="6cee43b8-089a-4601-b881-153487f6e20f" start_index="0" end="89d00137-8d48-437a-a12c-5d653b1e8242" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="08363dab-501b-4c31-8f3e-ee665721df8f" start_index="0" end="e19caef3-aa74-4b77-944b-5e91ae0cb9ee" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="fc0c4d7a-4445-4640-a72f-6322d13a27e9" start_index="0" end="08363dab-501b-4c31-8f3e-ee665721df8f" end_index="1" portType="0" />
+  </Connectors>
+  <Notes />
+</Workspace>
